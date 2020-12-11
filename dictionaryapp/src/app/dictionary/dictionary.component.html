@@ -1,0 +1,18 @@
+<div class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-text-white" style="padding:48px">
+      <div class="w3-row-padding w3-greyscale" style="margin-top:64px">
+          <div class="w3-section w3-margin-bottom">
+            <div class="w3-card">
+              <div class="w3-container">
+                  <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"></a>
+                  <div class="w3-section">      
+                      <input [(ngModel)] ="searchTerm" class="w3-input" type="text" required (keyup.enter) = "seachWord()">
+                      <label>Search</label>
+                      <i class="fa fa-search" (click) = "seachWord()"></i>
+                    </div>
+                <h3 *ngIf = "displayWord">{{displayWord}}</h3>
+                <p *ngFor = "let definition of results">{{definition}}</p>
+                
+              </div>
+    </div>
+</div>
